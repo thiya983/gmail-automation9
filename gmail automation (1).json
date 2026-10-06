@@ -1,0 +1,75 @@
+{
+  "name": "gmail automation",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 10,
+              "triggerAtMinute": 10
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.4,
+      "position": [
+        224,
+        0
+      ],
+      "id": "97831dc4-299e-43d1-a836-e4b525d9b9a4",
+      "name": "Schedule Trigger1"
+    },
+    {
+      "parameters": {
+        "sendTo": "santhiya26012007@gmail.com",
+        "subject": "welcome9",
+        "message": "hii",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        448,
+        0
+      ],
+      "id": "5e95385b-8600-4f06-b839-d87d99272d11",
+      "name": "Send a message",
+      "webhookId": "af48f4d3-8c11-413f-bf86-c10aed2d2d3e",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "uKgS7jxtjWTHnawK",
+          "name": "Gmail account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Schedule Trigger1": {
+      "main": [
+        [
+          {
+            "node": "Send a message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "bc3e75bf-5675-4dc3-939c-d43c7c2f74a1",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "fa0c00d081ec9759c34dc196d33394dda5c44d832626488b8a1cc6fddc8dcb5d"
+  },
+  "nodeGroups": [],
+  "id": "M0K3PFVYE5o8zAPW",
+  "tags": []
+}
